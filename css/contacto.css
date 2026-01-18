@@ -1,0 +1,236 @@
+:root{
+  --bg-1: #06263d;
+  --bg-2: #03223a;
+  --card-bg: rgba(255,255,255,0.025);
+  --card-border: rgba(255,255,255,0.06);
+  --accent-start: #9b3cff;   /* púrpura */
+  --accent-end:   #ff3fb9;   /* magenta */
+  --text-strong: #ffffff;
+  --text-muted: rgba(255,255,255,0.72);
+  --input-border: rgba(255,255,255,0.08);
+  --focus-glow: rgba(155,60,255,0.18);
+  --container-max: 1100px;
+  --radius: 10px;
+  --gap: 20px;
+}
+
+
+
+
+
+
+/* LEFT: info */
+
+
+/* Heading */
+.info h1{
+  color: var(--text-strong);
+  font-size: clamp(26px, 3.2vw, 36px);
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+.lead{
+  margin: 0 0 28px 0;
+  color: rgb(255, 255, 255);
+  max-width: 68ch;
+  line-height:1.6;
+  font-size: 16px;
+}
+
+/* Contact items (list) */
+.contacts{
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Individual contact item */
+.contact-item{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+.contact-item .icon{
+  width:42px;height:42px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+  color: var(--accent-end);
+  flex:0 0 42px;
+  box-shadow: inset 0 -8px 18px rgba(0,0,0,0.25);
+}
+.contact-item svg{ display:block; color: var(--accent-end); }
+
+/* meta text for each contact item */
+.meta{ line-height:1.28; }
+.meta-title{ color: #eef9fb; font-weight:600; font-size:16px; margin-bottom:4px; }
+.meta-desc{ color: rgb(255, 255, 255); font-size:16px; }
+
+/* RIGHT: form area */
+.form-area{
+ /*  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.008)); */
+  border-radius: 14px;
+  margin-top: 28px;
+  /* border: 1px solid rgba(255,255,255,0.035);
+  box-shadow: 0 5px 15px rgba(2,8,14,0.6); */
+}
+
+/* Form layout */
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap: var(--gap);
+}
+
+/* rows */
+.row{ 
+    width:100%;
+    display: flex;
+    flex-direction: column; 
+    gap: 14px;
+}
+
+/* two columns for names */
+.two-cols{
+  width:100%;
+    display: flex;
+    flex-direction: column; 
+    gap: 14px;
+}
+.sujeto{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.row input{
+  padding: 16px 20px;
+  background-color: #0E1C3B;
+  border: 1px solid #545A67;
+  border-radius: 8px;
+  color: white;
+}
+
+/* Placeholder color */
+input::placeholder{ color: rgba(255,255,255,0.35); }
+
+/* Focus state */
+input:focus{
+  border-color: rgba(155,60,255,0.95);
+  box-shadow: 0 6px 24px var(--focus-glow);
+  transform: translateY(-1px);
+}
+.btn-submit{
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: 0px;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    #792166,
+    #B212E1
+  );
+   transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.btn-submit:hover{
+  
+  background: linear-gradient(
+    90deg,
+    #B212E1,
+    #792166
+  );
+}
+
+
+.imagen-contacto{
+  left: 0;
+  margin-bottom: 25px;
+  border-bottom: 1px solid white;
+  width: 270px;
+}
+
+
+
+.banner-head{
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      45deg,
+      rgba(28, 40, 88, 0.678),
+      rgba(163, 24, 114, 0.699),
+      rgba(28, 40, 88, 0.74)
+    ),
+    url("../images/banner-head-contacto.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  
+}
+
+  .column-uno{
+    display: none;
+  }
+
+
+@media (min-width: 400px){
+  .imagen-contacto{
+    width: 330px;
+  }
+}
+
+
+@media (min-width: 950px){
+  .banner-head{
+    height: 160px;
+    margin-bottom: 100px;
+  }
+
+  .columnas-contacto{
+    display: flex;
+  }
+  .imagen-contacto{
+    display: none;
+  }
+
+  .column-uno{
+    display: block;
+    width: 600px;
+    padding-right: 50px;
+  }
+  .column-uno img{
+    width: 100%;
+  }
+
+  
+
+  .two-cols{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .two-cols input{
+    width: 100%;
+  }
+  .btn-submit{
+    width: 200px;
+  }
+  .primera-info{
+    display: flex;
+    gap: 28px;
+  }
+
+
+}

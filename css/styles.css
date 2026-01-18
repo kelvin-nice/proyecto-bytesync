@@ -1,0 +1,62 @@
+@import url('/css/inicio.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --bg-dark: #020b18;
+    --celeste: #006793;
+    --fuccia: #DB1689;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(to bottom, #15274D, #040930);
+    color: white;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+h1{
+    font-size: 24px;
+}
+@media (min-width: 500px){
+    h1{
+      font-size: 30px;  
+    }
+}
+p{
+    font-weight: 300;
+    line-height: 20px;
+}
+a {
+    text-decoration: none;
+}
+
+
+/* HEADER */
+/* .header {
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */

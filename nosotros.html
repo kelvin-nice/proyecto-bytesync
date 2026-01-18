@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteSync - Proceso</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+
+    
+    <main class="page">
+    <header class="hero" role="banner" aria-label="Paso 1 - Investigación y planificación">
+      <!-- Halo/spot (visual) -->
+      <div class="halo" aria-hidden="true"></div>
+
+      <!-- Big number "01" with subtle vertical gradient on the right digit -->
+      <div class="big-01" aria-hidden="true">
+        <span class="num">01</span>
+        <span class="num-overlay" aria-hidden="true"></span>
+      </div>
+
+      <!-- Top-left card -->
+      <article class="card card--top" aria-labelledby="h1">
+        <h3 id="h1">1. Investigación y planificación</h3>
+        <p>
+          Empezamos con una investigación profunda: analizamos el mercado, tu competencia y, sobre todo, a tus usuarios. Entender cómo piensan y qué necesitan nos ayuda a diseñar con propósito.
+        </p>
+      </article>
+
+      <!-- SVG dotted path -->
+      <svg class="path" viewBox="0 0 1000 160" preserveAspectRatio="none" aria-hidden="true">
+        <!-- The dashed path - rounded caps for smoother look -->
+        <path d="M86 88 C180 88 300 88 420 88 C560 88 700 88 840 88" fill="none"
+              stroke="rgba(255,255,255,0.92)" stroke-width="4" stroke-linecap="round"
+              stroke-dasharray="12 10"/>
+      </svg>
+
+      <!-- white dot placed at the first kink of the path -->
+      <div class="dot" aria-hidden="true"></div>
+    </header>
+
+    <!-- Section with large faded 02 and a card (right-aligned) -->
+    <section class="step">
+      <div class="bg-num">02</div>
+
+      <article class="card card--mid" aria-labelledby="h2">
+        <h3 id="h2">2. Diseño y prototipado</h3>
+        <p>
+          Convertimos la estrategia en interfaces visuales. Creamos prototipos funcionales que te permiten visualizar y validar la experiencia antes de escribir una sola línea de código.
+        </p>
+      </article>
+    </section>
+
+    <!-- Section with large faded 03 and a card (left-aligned) -->
+    <section class="step step--alt">
+      <div class="bg-num">03</div>
+
+      <article class="card card--bot" aria-labelledby="h3">
+        <h3 id="h3">3. Desarrollo y programación</h3>
+        <p>
+          Llevamos los diseños a la realidad con tecnología moderna y código limpio: soluciones rápidas, seguras y adaptables a cualquier dispositivo.
+        </p>
+      </article>
+    </section>
+
+    <footer class="end" role="contentinfo">
+      <p>Fin del contenido</p>
+    </footer>
+  </main>
+
+
+
+    <script src="js/animations-dos.js"></script>
+</body>
+</html>

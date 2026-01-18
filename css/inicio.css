@@ -1,0 +1,626 @@
+
+/* HERO */
+.blue-mobile{
+    display: none;
+}
+.fuccia-mobile{
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+.hero-image{
+    
+    overflow-x: hidden;
+}
+.isotipo-big{
+    display: none;
+}
+.hero-text{
+    margin-top: 20px;
+    overflow: visible;
+}
+.bola-fuccia{
+    width: 24px;
+    height: auto;
+    margin-bottom: 4px;
+}
+.tagline{
+    font-weight: 300;
+    color: #ebf6ff;
+}
+.subtext{
+    margin-top: 4px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.subtext strong{
+    font-weight: 700;
+}
+.description{
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+.btn-contact{
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 700;
+    background: linear-gradient(to left, #DB1689, #006793);
+    appearance: none;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: inline-block; /* Evita que tome todo el ancho y empuje otros elementos */
+    vertical-align: middle;
+
+    /* Colores de tu diseño (Azul -> Morado -> Rosa) */
+    background: linear-gradient(120deg, #004e92, #d63384, #004e92);
+    
+    /* HACER EL FONDO MÁS GRANDE: Esta es la clave */
+    background-size: 300% 300%;
+    
+    /* Animación */
+    animation: gradientShift 5s ease infinite;
+}
+/* Definir el movimiento del fondo */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* IMAGEN PRINCIPAL */
+
+.hero-image{
+    overflow: hidden;
+    height: 266.69px;
+}
+.hero-image img{
+    width: 100%;
+    height: 100%;
+    /* Esta es la propiedad mágica */
+    object-fit: cover; 
+    /* Opcional: centra la imagen si se recorta */
+    object-position: center;
+}
+
+
+/* meritos */
+.meritos{
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1250px;
+    padding: 20px;
+    border-radius: 12px;
+
+    border: 2px solid transparent;
+    border-radius: 15px;
+    background: 
+        linear-gradient(#1a2f5c, #0c1d42) padding-box, /* Color del fondo interno */
+        linear-gradient(to right, #d63384, #004e92) border-box; /* Color del borde */
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    width: 100px;
+}
+.card-icon{
+    width: 60px;
+    margin-bottom: 10px;
+}
+.card-icon img{
+    width: 100%;
+    height: 100%;
+}
+.card p{
+    font-size: 11px;
+    text-align: center;
+}
+
+
+
+
+/* CONOCENOS */
+.conocenos{
+    display: flex; /* Indispensable para que funcione order */
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    clear: both;
+}
+.text-conocenos{
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+.text-degradado{
+    background: linear-gradient(90deg, #fa48c7, #12AAF4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback para navegadores que no soportan background-clip: text */
+    display: inline-block;
+    font-weight: 800;
+}
+
+.btn-conocenos{
+    color: #FA92CC;
+    padding: 14px 26px;
+    border-radius: 20px;
+    background-color: #05122c;
+    display: flex;
+    gap: 8px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.btn-conocenos:hover{
+    background-color: #010d27;
+}
+
+.equipo-imagen{
+    max-width: 350px;
+    height: auto;
+    order: 2;
+    padding-right: 12px;
+    margin-bottom: 50px;
+}
+.equipo-imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* SERVICIOS */
+.servicio {
+  width: 100%;
+  padding: 60px 0;
+  color: white;
+
+  background:
+    linear-gradient(
+      45deg,
+      rgba(28, 40, 88, 0.678),
+      rgba(163, 24, 114, 0.699),
+      rgba(28, 40, 88, 0.74)
+    ),
+    url("../images/imagen-fondo.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.articulos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+article{
+    width: 100%;
+    padding: 24px;
+    border-radius: 20px;
+}
+.color-fuccia{
+    background-color: #A4368D;
+}
+.color-blue{
+    background-color: #16284E;
+}
+article img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 12px;
+}
+.text-app{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+
+
+
+/* FRANJA */
+.franja-total{
+    background: linear-gradient(
+    90deg,
+    #0B163D,
+    #741B59,
+    #0B163D
+  );
+}
+.franja{
+    padding: 35px 0px !important;
+}
+.img-franja{
+    display: none;
+}
+.text-franja{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+.btn-contactdos{
+    color: #741B59;
+    background-color: white;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 20px;
+    font-weight: 700;
+    margin: 10px auto 0px auto;
+}
+.btn-contactdos:hover{
+    background-color: rgb(255, 206, 206);
+}
+
+
+
+@media (min-width: 400px){
+    .hero-image{
+        height: auto;
+    }
+    .hero-image img{
+        width: 100%;
+        height: 100%;
+        /* Esta es la propiedad mágica */
+        object-fit: cover; 
+        /* Opcional: centra la imagen si se recorta */
+        object-position: center;
+    }
+    .btn-contactdos{
+        color: #741B59;
+        background-color: white;
+        padding: 12px 20px;
+        width: 200px;
+        border-radius: 20px;
+        font-weight: 700;
+        margin: 0 auto;
+    }
+
+}
+
+@media (min-width: 700px){
+
+
+    /* CONOCENOS */
+    .conocenos{
+        display: flex; /* Indispensable para que funcione order */
+        flex-direction: row;
+        align-items: center;
+      
+       padding: 45px 0px !important;
+    }
+    .text-conocenos{
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 35px;
+        margin-bottom: 25px;
+    }
+  
+
+    .equipo-imagen{
+        width: 250px;
+        height: auto;
+        order: 1;
+        margin-right: 20px;
+        margin-bottom: 0px;
+    }
+    .equipo-imagen img{
+        width: 250px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .servicio .container h1{
+        text-align: center;
+    }
+    
+.btn-contact{
+    margin-top: 10px;
+    padding: 16px 28px;
+    font-size: 16px;
+}
+article{
+    max-width: 280px;
+}
+    .hero-textimage{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: visible;
+    }
+    .hero-text{
+        margin-top: 0px;
+    }
+    .blue-mobile{
+        display: block;
+        position: absolute;
+        width: 400px;
+        opacity: 0.6;
+        left: 0;
+        z-index: -1;
+    }
+    .fuccia-mobile{
+        width: 350px;
+    }
+    /* MERITOS */
+    .meritos{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 30px 20px;
+        border-radius: 12px;
+
+        border: 1.7px solid transparent;
+        
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+        width: 200px;
+    }
+    .card-icon{
+        width: 75px;
+        margin-bottom: 10px;
+    }
+    .card-icon img{
+        width: 100%;
+        height: 100%;
+    }
+    .card p{
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+}
+
+
+@media (min-width: 942px){
+
+        .conocenos{
+        display: flex; /* Indispensable para que funcione order */
+        flex-direction: row;
+        align-items: center;
+      
+       padding: 80px 0px !important;
+    }
+    
+    .equipo-imagen{
+        width: 370px;
+        height: auto;
+        order: 1;
+        margin-bottom: 0px;
+        margin-right: 70px;
+        margin-left: 30px;
+    }
+    .equipo-imagen img{
+        width: 370px;
+        height: auto;
+        object-fit: contain;
+    }
+    
+
+
+    .text-agencia{
+        width: 450px;
+    }
+    .subtext{
+        font-size: 28px;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+        width: 230px;
+    }
+    .card-icon{
+        width: 85px;
+        margin-bottom: 10px;
+    }
+    .card-icon img{
+        width: 100%;
+        height: 100%;
+    }
+    .card p{
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .hero-image{
+        overflow: hidden;
+        max-height: 480px;
+    }
+    .hero-image img{
+        width: 100%;
+        height: 100%;
+        /* Esta es la propiedad mágica */
+        object-fit: cover; 
+        /* Opcional: centra la imagen si se recorta */
+        object-position: center;
+    }
+
+    .franja-total{
+        margin-top: 150px !important;
+    }
+
+    .franja{
+        padding: 35px 0px;
+        display: flex;
+        align-items: center;
+    }
+    .img-franja{
+        display: block;
+        position: absolute;
+        margin-bottom: 100px;
+    }
+    .text-franja{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: left;
+        padding-left: 400px;
+    }
+    .btn-contactdos{
+        color: #741B59;
+        background-color: white;
+        padding: 12px 20px;
+        width: 200px;
+        border-radius: 20px;
+        font-weight: 700;
+        margin: 10px auto 0px 0px;
+        text-align: center;
+    }
+
+
+}
+
+@media (min-width: 942px){
+    .blue-mobile{
+        display: block;
+        position: absolute;
+        width: 600px;
+        left: 0;
+        z-index: -1;
+    }
+    .fuccia-mobile{
+        width: 550px;
+    }
+    .description{
+        width: 450px;
+    }
+}
+
+@media (min-width: 1100px){
+    .servicio .container h1{
+        text-align: left;
+    }
+    .articulos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+article{
+    max-width: 330px;
+}
+    .equipo-imagen img{
+        width: 430px;
+        height: auto;
+        
+    }
+    .text-conocenos{
+        max-width: 740px;
+        gap: 28px;
+    }
+    .btn-conocenos{
+        margin-top: 8px;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .equipo-imagen{
+        width: 430px;
+        height: auto;
+        margin-right: 160px;
+    }
+    .text-agencia{
+        width: 460px;
+    }
+    .subtext{
+        font-size: 30px;
+    }
+    .btn-contact{
+        margin-top: 30px;
+        padding: 16px 28px;
+        font-size: 16px;
+    }
+    .isotipo-big{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 300px;
+        width: 250px;
+        height: auto;
+    }
+    .hero-image{
+        margin-right: 80px;
+    }
+    .hero-image img{
+        width: 100%;
+        height: 100%;
+        /* Esta es la propiedad mágica */
+        object-fit: cover; 
+        /* Opcional: centra la imagen si se recorta */
+        object-position: center;
+    }
+}
+
+@media (min-width: 1200px){
+    .text-agencia{
+        width: 520px;
+    }
+    .subtext{
+        font-size: 34px;
+    }
+    .btn-contact{
+        margin-top: 25px;
+        padding: 16px 28px;
+        font-size: 16px;
+    }
+    .hero-image{
+        width: auto;
+        width: 629px;
+        height: 490px;
+    }
+    .hero-image img{
+        width: 629px;
+        height: 490px;
+        /* Esta es la propiedad mágica */
+        object-fit: cover; 
+        /* Opcional: centra la imagen si se recorta */
+        object-position: center;
+    }
+    article{
+    max-width: 365px;
+}
+}
+
+@media (min-width: 1250px){
+    article{
+    max-width: 380px;
+}
+}
