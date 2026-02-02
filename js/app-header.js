@@ -67,58 +67,16 @@ class AppHeader extends HTMLElement {
                         }
                         
                     }
-                    .servicios{
-                    #servicios{
-                            text-decoration: none;
-                            padding: 16px 8px;
-                            color: var(--gray);
-                            &:hover{
-                                color: rgb(255, 255, 255);
-                                font-weight: 500;
-                            }
-                    }
-                    }
+
+
+
+
+                
                     
                 }
             }
 
-            .menu ul .servicios{
-                        position: relative;
-                            ol{
-                                list-style: none;
-                                position: absolute;
-                                top: 100%;
-                                border: 1px solid #8a8a8a ;
-                                border-radius: 8px;
-                                margin-top: 12px;
-                                width: 150px;
-                                padding: 12px 0;
-                                background-color: white;
-                                transition: all 0.3s ease;
-                                opacity: 0;
-                                visibility: hidden;
-                                li{
-                                    a{
-                                        display: block;
-                                        text-decoration: none;
-                                        padding: 8px 16px;
-                                        color: var(--dark);
-                                        background-color: white;
-                                        &:hover{
-                                            background-color: #ebffcc;
-                                        }
-                                    }
-                                }
-                            }
-                            &:hover{
-                                ol{
-                                    opacity: 1;
-                                    visibility: visible;
-                                }
-                            }
-                    }
-
-
+            
 
 
 
@@ -244,49 +202,7 @@ class AppHeader extends HTMLElement {
                 }
 
 
-                
-            .menu ul .servicios .submenu{
-                                list-style: none;
-                                position: relative;
-                                border: 0;
-                                border-radius: 8px;
-                                margin-top: 0px;
-                                width: 100%;
-                                padding: 0;
-                                z-index: 80;
-                                background-color: rgb(255, 255, 255);
-                                transition: all 0.3s ease;
-                                opacity: 0;
-                                visibility: hidden;
-                                max-height: 0;
-                                overflow: hidden;
-                                max-height: 0;
-                                overflow: hidden;
-                                transition: all 0.3s ease;
-                                display: block !important;
-                }
-
-                .menu ul .servicios .submenu.active {
-                    max-height: 500px; /* Ajusta este valor según necesites */
-                    opacity: 1;
-                    visibility: visible;
-                    padding: 12px 0;
-                    margin-top: 30px;
-                }
-                .menu ul .servicios .submenu li a {
-                    color: var(--dark) !important;
-                    font-size: 20px;
-                    padding: 10px 20px !important;
-                }
-
-                .menu ul .servicios #servicios{
-                    font-size: 20px;
-                    color: white;
-                }
-                  
-
-
-            }
+             
 
         </style>
   
@@ -303,9 +219,7 @@ class AppHeader extends HTMLElement {
                 <ul>
                     <li><a href="index.html" class="nav-link" id="index">Inicio</a></li>
                     <li><a href="nosotros.html" class="nav-link" id="nosotros">Nosotros</a></li>
-                    <li class="servicios" ><a href="servicios.html" class="nav-link" id="servicios">Servicios</a>
-                        
-                    </li>
+                    <li><a href="servicios.html" class="nav-link" id="servicios">Servicios</a></li>
                     
                     <li><a href="contacto.html" class="nav-link" id="contacto">Contacto</a></li>
                 </ul>
@@ -343,30 +257,10 @@ class AppHeader extends HTMLElement {
                     menu.classList.remove("active");
                 }))
 
-                this.shadowRoot.querySelector('#servicios').addEventListener('click', function(e) {
-            if (window.innerWidth <= 950) {
-                e.preventDefault();
-                e.stopPropagation();
-                const submenu = this.closest('.servicios').querySelector('.submenu');
-                submenu.classList.toggle('active');
                 
-                // Cierra otros submenús si están abiertos
-                this.shadowRoot.querySelectorAll('.submenu').forEach(menu => {
-                    if (menu !== submenu && menu.classList.contains('active')) {
-                        menu.classList.remove('active');
-                    }
-                });
-            }
-        });
 
         // Cierra el submenú al hacer clic fuera
-        document.addEventListener('click', function(e) {
-            if (window.innerWidth <= 950 && !e.target.closest('.servicios')) {
-                this.shadowRoot.querySelectorAll('.submenu').forEach(menu => {
-                    menu.classList.remove('active');
-                });
-            }
-        });
+       
 
 
 
