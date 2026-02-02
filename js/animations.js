@@ -1,138 +1,235 @@
-// Esperar a que el DOM esté listo
+gsap.registerPlugin(ScrollTrigger);
+
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // 1. Animamos el texto del hero (fade in y sube)
+
+  /* =================================================
+     HERO (CARGA INICIAL)
+  ================================================= */
+  if (document.querySelector(".hero-text")) {
+
     gsap.from(".hero-text > *", {
-        opacity: 0,
-        y: 30,
-        duration: 1,
-        stagger: 0.2, // Esto hace que los elementos aparezcan uno tras otro
-        ease: "power2.out"
+      y: 30,
+      autoAlpha: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power2.out"
     });
 
-    gsap.fromTo(".btn-contact", 
-    { opacity: 0, y: 20 }, // Estado inicial (abajo)
-    { opacity: 1, y: 0, duration: 1, delay: 1 } // Estado final (su sitio original)
-);
+    gsap.from(".btn-contact", {
+      y: 20,
+      autoAlpha: 0,
+      duration: 1,
+      delay: 1
+    });
 
-    // 2. Animamos la imagen principal (entra desde la derecha)
     gsap.from(".hero-image img", {
-        opacity: 0,
-        x: 100,
-        duration: 1.5,
-        ease: "power3.out",
-        delay: 0.5
+      x: 100,
+      autoAlpha: 0,
+      duration: 1.5,
+      ease: "power3.out",
+      delay: 0.5
     });
 
-    // 3. Animamos las tarjetas de méritos
     gsap.from(".card", {
-        scale: 0.5,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.3,
-        ease: "back.out(1.7)", // Efecto de rebote
-        delay: 1
+      scale: 0.5,
+      autoAlpha: 0,
+      duration: 0.8,
+      stagger: 0.3,
+      ease: "back.out(1.7)",
+      delay: 1
     });
 
-    // 4. Bonus: Efecto de "respiración" para la imagen (Loop infinito)
+    // respiración
     gsap.to(".hero-image img", {
-        y: 15,
-        duration: 2,
-        repeat: -1, // Infinito
-        yoyo: true, // Va y vuelve
-        ease: "sine.inOut"
+      y: 15,
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
     });
 
-   
-    // Animación de barrido desde la derecha
     gsap.from(".isotipo-big", {
-        x: 100,           // Empieza 100px a la derecha
-        opacity: 0,       // Empieza invisible
-        duration: 2,    // Tiempo que tarda en llegar
-        ease: "power2.out" // Efecto de frenado suave al final
+      x: 100,
+      autoAlpha: 0,
+      duration: 2,
+      ease: "power2.out"
     });
+  }
 
-
-
-
-
-
-
-
-
-
-// --- 1. SECCIÓN CONÓCENOS (Aparece al bajar) ---
-    const tlConocenos = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".conocenos",
-            start: "top 85%",    // La animación inicia cuando el tope de la sección llega al 85% de la pantalla
-            toggleActions: "play none none none", // Se ejecuta una sola vez y no regresa
-            // markers: true,    // Descomenta esta línea para ver las guías de activación
-        }
-    });
-
-    tlConocenos.from(".equipo-imagen", { 
-        x: -150,              // Viene desde la izquierda
-        opacity: 0, 
-        duration: 1.2, 
-        ease: "power2.out" 
+  /* =================================================
+     CONÓCENOS
+  ================================================= */
+  if (document.querySelector(".conocenos")) {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".conocenos",
+        start: "top 85%",
+        once: true
+      }
     })
-    .from(".text-conocenos", { 
-        x: 150,               // Viene desde la derecha
-        opacity: 0, 
-        duration: 1.2, 
-        ease: "power2.out" 
-    }, "-=0.8");              // Empieza un poco antes de que termine la imagen
+    .from(".equipo-imagen", {
+      x: -150,
+      autoAlpha: 0,
+      duration: 1.2,
+      ease: "power2.out"
+    })
+    .from(".text-conocenos", {
+      x: 150,
+      autoAlpha: 0,
+      duration: 1.2,
+      ease: "power2.out"
+    }, "-=0.7");
+  }
 
-    // --- 2. SECCIÓN SERVICIOS (Barrido de abajo hacia arriba) ---
+  /* =================================================
+     SERVICIOS
+  ================================================= */
+  if (document.querySelector(".articulos")) {
     gsap.from(".articulos article", {
-        scrollTrigger: {
-            trigger: ".articulos",
-            start: "top 85%",
-            toggleActions: "play none none none",
-        },
-        y: 100,               // Viene desde abajo
-        opacity: 0, 
-        duration: 1,
-        stagger: 0.2,         // Aparecen uno tras otro
-        ease: "power3.out"
+      y: 100,
+      autoAlpha: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".articulos",
+        start: "top 85%",
+        once: true
+      }
+    });
+  }
+
+  /* =================================================
+     FRANJA
+  ================================================= */
+  if (document.querySelector(".franja-total")) {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".franja-total",
+        start: "top 80%",
+        once: true
+      }
+    })
+    .from(".img-franja", {
+      xPercent: -120,
+      autoAlpha: 0,
+      duration: 1.2,
+      ease: "power3.out"
+    })
+    .from(".text-franja > *", {
+      x: 40,
+      autoAlpha: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power2.out"
+    }, "-=0.5");
+  }
+
+  /* =================================================
+     CONTACTO
+  ================================================= */
+  if (document.querySelector(".banner-head")) {
+    gsap.from(".banner-head h1", {
+      x: 60,
+      autoAlpha: 0,
+      duration: 1,
+      ease: "power2.out"
+    });
+  }
+
+  if (document.querySelector(".imagen-contacto")) {
+    gsap.from(".imagen-contacto", {
+      x: 100,
+      autoAlpha: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".imagen-contacto",
+        start: "top 90%",
+        once: true
+      }
+    });
+  }
+
+  if (document.querySelector(".columnas-contacto")) {
+    gsap.from(".column-uno img", {
+      xPercent: 30,
+      autoAlpha: 0,
+      duration: 1.3,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".columnas-contacto",
+        start: "top 75%",
+        once: true
+      }
+    });
+  }
+
+  if (document.querySelector(".info")) {
+    gsap.from(".info > *", {
+      x: 50,
+      autoAlpha: 0,
+      duration: 1,
+      stagger: 0.15,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".info",
+        start: "top 80%",
+        once: true
+      }
+    });
+  }
+
+  if (document.querySelector(".contacts")) {
+    gsap.from(".contact-item", {
+      x: 40,
+      autoAlpha: 0,
+      duration: 1,
+      stagger: 0.15,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".contacts",
+        start: "top 80%",
+        once: true
+      }
+    });
+  }
+
+  if (document.querySelector(".form-area")) {
+    gsap.from(".form-area", {
+      x: 80,
+      autoAlpha: 0,
+      duration: 1.1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".form-area",
+        start: "top 85%",
+        once: true
+      }
     });
 
-
-
-
-
-
-
-
-
-
-    const tlFranja = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".franja-total",
-      start: "top 80%",
-      toggleActions: "play none none none"
-    }
-  });
-
-  // 1️⃣ IMAGEN entra primero (barrido lateral)
-  tlFranja.from(".img-franja", {
-    xPercent: -120,
-    opacity: 0,
-    duration: 1.2,
-    ease: "power3.out"
-  })
-
-  // 2️⃣ TEXTO aparece después (suave y elegante)
-  .from(".text-franja > *", {
-    x: 40,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.2,
-    ease: "power2.out"
-  }, "-=0.5"); // se superpone un poco
-
-
-
+    gsap.from(".contact-form .row", {
+      x: 40,
+      autoAlpha: 0,
+      duration: 1,
+      stagger: 0.15,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".form-area",
+        start: "top 85%",
+        once: true
+      }
+    });
+  }
 
 });
+
+
+
+
+
+
+
+  
+
+

@@ -1,4 +1,6 @@
-
+.space{
+    margin-top: 70px;
+}
 /* HERO */
 .blue-mobile{
     display: none;
@@ -624,3 +626,5 @@ article{
     max-width: 380px;
 }
 }
+
+

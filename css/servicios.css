@@ -1,0 +1,219 @@
+.banner-head{
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      45deg,
+      rgba(28, 40, 88, 0.678),
+      rgba(163, 24, 114, 0.699),
+      rgba(28, 40, 88, 0.74)
+    ),
+    url("../images/banner-head-servicios.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  margin-top: 70px;
+  
+}
+
+.text-degradado{
+    background: linear-gradient(90deg, #fa48c7, #12AAF4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback para navegadores que no soportan background-clip: text */
+    display: inline-block;
+    font-weight: 800;
+}
+
+
+.servicio .container h1{
+    text-align: center;
+}
+.servicio{
+    margin-bottom: 50px;
+}
+
+.img-chirra{
+    max-width: 580px;
+}
+.img-chirra img{
+    width: 100%;
+    height: auto;
+}
+
+
+.info-chirra{
+    display: flex;
+}
+
+.contenido-chirra{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 480px;
+}
+.contenido-chirra img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    align-self: flex-start; /* evita estiramiento en flex */
+}
+
+
+.btn-chirra{
+    background-color: #9B227D;
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-right: auto;
+}
+
+.izquier{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.derech{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+
+.img-chirra-mobile{
+   display: none; 
+  }
+
+@media (min-width: 950px){
+  .banner-head{
+    height: 160px;
+    margin-bottom: 70px;
+  }
+
+}
+
+
+@media (max-width: 840px){
+
+    .info-chirra{
+        flex-direction: column;
+    }
+
+    .users{
+        display: none;
+    }
+    .btn-chirra{
+    background-color: #9B227D;
+    padding: 12px 18px;
+    border-radius: 8px;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-right: auto;
+    width: 160px;
+}
+
+.contenido-chirra{
+    margin-left: 0px;
+}
+
+.aplicacion-chirra{
+    width: 250px !important;
+}
+  .img-chirra-mobile{
+    display: block;
+    margin-top: 30px;
+    max-width: 450px;
+  }
+  .img-chirra-mobile img{
+    width: 100%;
+  }
+  .img-chirra{
+    width: 100%;
+  }
+
+  .img-chirra{
+    display: none;
+}
+.servicio{
+    margin-bottom: 20px;
+}
+
+}
+
+
+
+
+
+.fenix{
+    background: linear-gradient(135deg, #B33496, #800D62);
+    padding: 60px 0px;
+}
+
+.info-fenix{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.img-fenix-mobile{
+    max-width: 550px;
+}
+.img-fenix-mobile img{
+    width: 100%;
+}
+
+     .btn-fenix{
+    background-color: #16254D;
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-right: auto;
+}
+
+@media (max-width: 840px){
+    .info-fenix{
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 0 0 auto;
+    }
+    .fenix{
+        padding: 30px 0px;
+    }
+        .btn-fenix{
+    background-color: #16254D;
+        padding: 12px 18px;
+        border-radius: 8px;
+        color: white;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-right: auto;
+        width: 160px;
+    }
+    .aplicacion-fenix{
+        width: 200px !important;
+    }
+}

@@ -19,7 +19,7 @@ class AppHeader extends HTMLElement {
                 padding: 0;
                 background-color: #1C1C1C;
                 z-index: 99;
-                position: sticky;
+                position: fixed;
                 top: 0;
                 background-color: rgba(28, 28, 28, 0.09); 
                 backdrop-filter: blur(10px);
@@ -302,8 +302,8 @@ class AppHeader extends HTMLElement {
             <nav class="menu" >
                 <ul>
                     <li><a href="index.html" class="nav-link" id="index">Inicio</a></li>
-                    <li><a href="#" class="nav-link" id="nosotros">Nosotros</a></li>
-                    <li class="servicios" ><a href="servicios.html" class="nav-link" id="nosotros">Servicios</a>
+                    <li><a href="nosotros.html" class="nav-link" id="nosotros">Nosotros</a></li>
+                    <li class="servicios" ><a href="servicios.html" class="nav-link" id="servicios">Servicios</a>
                         
                     </li>
                     

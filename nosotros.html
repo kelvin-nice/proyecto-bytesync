@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ByteSync - Proceso</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/nosotros.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
@@ -13,69 +14,195 @@
 <body>
     
 
+  <app-header></app-header>
+
+
+    <section class="banner-head" >
+        <h1>Nosotros</h1>
+    </section>
     
-    <main class="page">
-    <header class="hero" role="banner" aria-label="Paso 1 - Investigación y planificación">
-      <!-- Halo/spot (visual) -->
-      <div class="halo" aria-hidden="true"></div>
+    <main >
 
-      <!-- Big number "01" with subtle vertical gradient on the right digit -->
-      <div class="big-01" aria-hidden="true">
-        <span class="num">01</span>
-        <span class="num-overlay" aria-hidden="true"></span>
-      </div>
+      <section class="servicio">
+        <div class="container">
+            <h1 style="margin-bottom: 10px;" ><span class="text-degradado" >Nuestros Principios</span></h1>
+            <p class="head-parraf"> Nuestros principios reflejan quiénes somos, cómo trabajamos y 
+              el impacto que buscamos generar a través del diseño y la tecnología.</p>
+            <br/>
+            <br/>
+        </div>
+      </section>
+      <section class="filosofia">
+        <div class="container nosotross">
+          <div  class="mision-img" ><img src="images/mision.svg" alt="mision"></div>
+          <div class="textito">
+            <h1 style="margin-bottom: 8px;" >Misión</h1>
+            <p>Crear soluciones digitales funcionales que aporten valor real, combinando creatividad, estrategia y tecnología para impulsar el crecimiento de nuestros clientes.</p>
+          </div>
+        </div>
 
-      <!-- Top-left card -->
-      <article class="card card--top" aria-labelledby="h1">
-        <h3 id="h1">1. Investigación y planificación</h3>
-        <p>
-          Empezamos con una investigación profunda: analizamos el mercado, tu competencia y, sobre todo, a tus usuarios. Entender cómo piensan y qué necesitan nos ayuda a diseñar con propósito.
-        </p>
-      </article>
+        <div class="container nosotross">
+          
+          <div class="textito">
+            <h1 style="margin-bottom: 8px;" >Visión</h1>
+            <p>Ser un referente en diseño y desarrollo digital, reconocido por nuestra calidad, innovación y compromiso con cada proyecto.</p>
+          </div>
+          <div  class="mision-img" ><img src="images/vision.svg" alt="mision"></div>
+        </div>
 
-      <!-- SVG dotted path -->
-      <svg class="path" viewBox="0 0 1000 160" preserveAspectRatio="none" aria-hidden="true">
-        <!-- The dashed path - rounded caps for smoother look -->
-        <path d="M86 88 C180 88 300 88 420 88 C560 88 700 88 840 88" fill="none"
-              stroke="rgba(255,255,255,0.92)" stroke-width="4" stroke-linecap="round"
-              stroke-dasharray="12 10"/>
-      </svg>
-
-      <!-- white dot placed at the first kink of the path -->
-      <div class="dot" aria-hidden="true"></div>
-    </header>
-
-    <!-- Section with large faded 02 and a card (right-aligned) -->
-    <section class="step">
-      <div class="bg-num">02</div>
-
-      <article class="card card--mid" aria-labelledby="h2">
-        <h3 id="h2">2. Diseño y prototipado</h3>
-        <p>
-          Convertimos la estrategia en interfaces visuales. Creamos prototipos funcionales que te permiten visualizar y validar la experiencia antes de escribir una sola línea de código.
-        </p>
-      </article>
-    </section>
-
-    <!-- Section with large faded 03 and a card (left-aligned) -->
-    <section class="step step--alt">
-      <div class="bg-num">03</div>
-
-      <article class="card card--bot" aria-labelledby="h3">
-        <h3 id="h3">3. Desarrollo y programación</h3>
-        <p>
-          Llevamos los diseños a la realidad con tecnología moderna y código limpio: soluciones rápidas, seguras y adaptables a cualquier dispositivo.
-        </p>
-      </article>
-    </section>
-
-    <footer class="end" role="contentinfo">
-      <p>Fin del contenido</p>
-    </footer>
-  </main>
+        <div class="container nosotross">
+          <div  class="mision-img" ><img src="images/valores.svg" alt="mision"></div>
+          <div class="textito">
+            <h1 style="margin-bottom: 8px;" >Valores</h1>
+            <p> <strong>Creatividad, honestidad, colaboración y excelencia.</strong> Estos valores guían nuestro trabajo y definen la forma en que construimos relaciones y resultados.</p>
+          </div>
+        </div>
+      </section>
 
 
 
-    <script src="js/animations-dos.js"></script>
+      <section class="context">
+            <div class="container texto-franja-medio">
+                <h1 style="margin-bottom: 10px;" ><span class="text-degradado" >Nuestros Proceso de diseño y desarrollo</span></h1> 
+                   <p class="parrafo"> Lorem ipsum dolor sit amet consectetur. A aliquam hac tortor massa hendrerit vitae. Odio volutpat sit tincidunt Lorem ipsum dolor sit amet consectetur. A aliquam hac tortor massa hendrerit vitae. Odio volutpat sit tincidunt </p>
+                   <br/>
+                   <br/>
+            </div>
+      </section>
+
+
+
+
+<!--       <section>
+        <div class="container">
+          <div class="articulos-cajas">
+
+            <article>
+              <div class="caja-x">
+                <h2>1. Investigación y planificación</h2> <br/>
+                <p>Empezamos con una investigación profunda: analizamos el mercado, tu competencia y sobre todo, a tus usuarios. Entender cómo piensan y qué necesitan eso nos ayuda a diseñar con propósito.</p>
+              </div>
+              <div class="impar">
+                <img src="images/uno.svg" alt="">
+              </div>
+            </article>
+
+            
+
+            <article>
+              <div class="impar">
+                <img src="images/dos.svg" alt="">
+              </div>
+              <div class="caja-x">
+                <h2>1. Investigación y planificación</h2> <br/>
+                <p>Empezamos con una investigación profunda: analizamos el mercado, tu competencia y sobre todo, a tus usuarios. Entender cómo piensan y qué necesitan eso nos ayuda a diseñar con propósito.</p>
+              </div>
+            </article>
+
+            <article>
+              <div class="caja-x">
+                <h2>1. Investigación y planificación</h2> <br/>
+                <p>Empezamos con una investigación profunda: analizamos el mercado, tu competencia y sobre todo, a tus usuarios. Entender cómo piensan y qué necesitan eso nos ayuda a diseñar con propósito.</p>
+              </div>
+              <div class="impar">
+                <img src="images/tres.svg" alt="">
+              </div>
+            </article>
+
+            <article>
+              <div class="impar">
+                <img src="images/cuatro.svg" alt="">
+              </div>
+              <div class="caja-x">
+                <h2>1. Investigación y planificación</h2> <br/>
+                <p>Empezamos con una investigación profunda: analizamos el mercado, tu competencia y sobre todo, a tus usuarios. Entender cómo piensan y qué necesitan eso nos ayuda a diseñar con propósito.</p>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+ -->
+
+
+
+
+      
+
+
+
+
+      <section>
+  <div class="container">
+  
+
+    <!-- process-wrap: overlay SVG will be inserted here by the GSAP script -->
+    <div class="process-wrap">
+      <div class="articulos-cajas">
+
+        <article>
+          <div class="caja-x" id="box-1">
+            <h2>1. Investigación y planificación</h2>
+            <p>Empezamos con una investigación profunda: analizamos el mercado, tu competencia y sobre todo, a tus usuarios. Entender cómo piensan y qué necesitan nos ayuda a diseñar con propósito.</p>
+          </div>
+          <div class="impar">
+            <img src="images/uno.svg" alt="ilustración uno">
+          </div>
+        </article>
+
+        <article style="margin-top: 90px;" class="numeritos" >
+          <div class="impar">
+            <img src="images/dos.svg" alt="ilustración dos">
+          </div>
+          <div class="caja-x" id="box-2">
+            <h2>2. Diseño y prototipado</h2>
+            <p>Convertimos la estrategia en interfaces visuales que permiten validar la experiencia antes de escribir código.</p>
+          </div>
+        </article>
+
+        <article class="numeritos">
+          <div class="caja-x" id="box-3">
+            <h2>3. Desarrollo y programación</h2>
+            <p>Llevamos los diseños a la realidad con tecnología moderna y código limpio. Soluciones rápidas, seguras y adaptables a cualquier dispositivo.</p>
+          </div>
+          <div class="impar">
+            <img src="images/tres.svg" alt="ilustración tres">
+          </div>
+        </article>
+
+        <article class="numeritos">
+          <div class="impar">
+            <img src="images/cuatro.svg" alt="ilustración cuatro">
+          </div>
+          <div class="caja-x" id="box-4">
+            <h2>4. Pruebas y lanzamiento</h2>
+            <p>Antes de salir a producción realizamos pruebas y ajustes finales para asegurar un lanzamiento estable.</p>
+          </div>
+        </article>
+
+      </div> <!-- .articulos-cajas -->
+      <!-- SVG overlay is created and inserted automatically by the GSAP script inside .process-wrap -->
+    </div> <!-- .process-wrap -->
+  </div> <!-- .container -->
+</section>
+
+      
+
+      
+
+
+    </main>
+
+        <app-footer></app-footer>
+
+
+
+    <script src="js/app-header.js" ></script>
+    <script src="js/app-footer.js" ></script>
+    <script src="js/animations.js"></script>
+    <script src="js/animations-tres.js" ></script>
+
 </body>
 </html>
